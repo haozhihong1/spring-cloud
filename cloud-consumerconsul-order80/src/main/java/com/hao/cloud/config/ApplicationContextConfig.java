@@ -1,4 +1,4 @@
-package com.hao.springcloud.config;
+package com.hao.cloud.config;
 
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.context.annotation.Bean;
