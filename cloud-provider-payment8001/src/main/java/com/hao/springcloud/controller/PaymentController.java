@@ -47,6 +47,15 @@ public class PaymentController {
             return new CommonResult(444,"查询失败" + port,null);
         }
     }
+    @GetMapping("/payment/feign/timeout")
+    public String testFeignTimeout(){
+        try {
+            Thread.sleep(2000);
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+        return port;
+    }
     @GetMapping("/payment/discover")
     public Object discover(){
         List<String> services = discoveryClient.getServices();
